@@ -1,0 +1,24 @@
+{ 
+    "name": "gota-certa-icaraima",
+  "version": "1.0.0",
+  "description": "Sistema web para uso sustentável da água na irrigação agrícola em Icaraíma.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "agrinho",
+    "sustentabilidade",
+    "irrigacao",
+    "html",
+    "css",
+    "javascript",
+    "backend"
+  ],
+  "author": "Equipe Gota Certa",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
