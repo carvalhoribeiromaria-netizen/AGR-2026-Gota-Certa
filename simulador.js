@@ -1,5 +1,4 @@
-const formSimulador = document.getElementById("formSimulacao");
-
+const formSimulador = document.getElementById("formSimulacao")
 formSimulador.addEventListener("submit", function (evento) {
   evento.preventDefault();
 
