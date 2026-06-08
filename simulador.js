@@ -1,4 +1,4 @@
-const formSimulador = document.getElementById("formSimulador");
+const formSimulador = document.getElementById("formSimulacao");
 
 formSimulador.addEventListener("submit", function (evento) {
   evento.preventDefault();
@@ -106,22 +106,19 @@ function calcularResultado(dados) {
 function mostrarResultado(resultado) {
   const secaoResultado = document.getElementById("resultado");
 
-  document.getElementById("resRecomendacao").textContent = resultado.recomendacao;
-  document.getElementById("resRisco").innerHTML = criarBadgeRisco(resultado.risco);
-  document.getElementById("resLitros").textContent = `${resultado.litrosEconomizados} litros`;
-  document.getElementById("resSelo").textContent = resultado.selo;
-  document.getElementById("resDica").textContent = resultado.dica;
+  secaoResultado.innerHTML = `
+    <h3>Resultado da Simulação</h3>
 
-  const barra = document.getElementById("barraIndice");
-  barra.style.width = `${resultado.indiceGotaCerta}%`;
-  barra.textContent = `${resultado.indiceGotaCerta}%`;
+    <p><strong>Recomendação:</strong> ${resultado.recomendacao}</p>
 
-  secaoResultado.style.display = "block";
-  secaoResultado.scrollIntoView({ behavior: "smooth" });
-}
+    <p><strong>Risco:</strong> ${resultado.risco}</p>
 
-function criarBadgeRisco(risco) {
-  const classe = risco.toLowerCase();
+    <p><strong>Litros economizados:</strong> ${resultado.litrosEconomizados} litros</p>
 
-  return `<span class="badge badge-${classe}">${risco}</span>`;
+    <p><strong>Selo:</strong> ${resultado.selo}</p>
+
+    <p><strong>Dica:</strong> ${resultado.dica}</p>
+
+    <p><strong>Índice Gota Certa:</strong> ${resultado.indiceGotaCerta}%</p>
+  `;
 }
