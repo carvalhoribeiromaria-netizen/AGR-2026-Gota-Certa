@@ -1,0 +1,93 @@
+!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador - Gota Certa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Gota Certa Icaraíma</h1>
+    <img src="img.jpeg" alt="Logo" width="200">
+    <p>Produzir bem, irrigar melhor e preservar sempre.</p>
+</header>
+
+<nav>
+    <a href="index.html">Início</a>
+    <a href="simulador.html" class="ativo">Simulador</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="historico.html">Histórico</a>
+    <a href="sobre.html">Sobre</a>
+</nav>
+
+<main class="container">
+
+    <section class="card">
+        <h2>Simulador de Irrigação</h2>
+
+        <form id="formSimulacao">
+
+            <label>Nome:</label>
+            <input type="text" id="nome" required>
+
+            <label>Cultura:</label>
+            <select id="cultura">
+                <option>Soja</option>
+                <option>Milho</option>
+                <option>Feijão</option>
+                <option>Trigo</option>
+            </select>
+
+            <label>Tipo de Solo:</label>
+            <select id="solo">
+                <option>Arenoso</option>
+                <option>Argiloso</option>
+                <option>Misto</option>
+            </select>
+
+            <label>Temperatura (°C):</label>
+            <input type="number" id="temperatura" required>
+
+            <label>Umidade (%):</label>
+            <input type="number" id="umidade" required>
+
+            <label>Previsão de Chuva (mm):</label>
+            <input type="number" id="previsaoChuva" required>
+
+            <label>Fase da Planta:</label>
+            <select id="fasePlanta">
+                <option>Plantio</option>
+                <option>Crescimento</option>
+                <option>Produção</option>
+            </select>
+
+            <label>Área Cultivada (hectares):</label>
+            <input type="number" id="area" required>
+
+            <button type="submit">
+                Calcular Irrigação
+            </button>
+
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>Resultado</h2>
+
+        <div id="resultado">
+            Preencha os dados e clique em calcular.
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Gota Certa Icaraíma | Projeto Agrinho 2026</p>
+</footer>
+
+<script src="simulador.js"></script>
+
+</body>
+</html>
